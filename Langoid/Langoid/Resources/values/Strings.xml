@@ -3,5 +3,4 @@
     <string name="ApplicationName">Langoid</string>
     <string name="Start">Start</string>
     <string name="Stop">Stop</string>
-    <string name="DateBaseName">LangoidDataBase</string>
 </resources>

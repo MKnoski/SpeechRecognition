@@ -98,9 +98,6 @@ namespace Langoid
 			// aapt resource value: 0x7f040000
 			public const int ApplicationName = 2130968576;
 			
-			// aapt resource value: 0x7f040003
-			public const int DateBaseName = 2130968579;
-			
 			// aapt resource value: 0x7f040001
 			public const int Start = 2130968577;
 			

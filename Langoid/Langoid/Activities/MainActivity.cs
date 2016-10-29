@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using Android.App;
 using Android.Content;
-using Android.Widget;
 using Android.OS;
 using Android.Speech;
+using Android.Widget;
+using Langoid.Models;
+using Langoid.Services;
 
-namespace Langoid
+namespace Langoid.Activities
 {
     [Activity(Label = "Langoid", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
@@ -14,15 +17,21 @@ namespace Langoid
         private Button startButton;
         private Button stopButton;
 
+        private List<Word> wordsList;
+        private JsonFileReader jsonFileReader;
+
         protected override void OnCreate(Bundle bundle)
         {
+            base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
-
             this.LoadLayout();
 
-            speechRecognizer = SpeechRecognizer.CreateSpeechRecognizer(this);
-            speechRecognizer.Results += SpeechRecognizer_Results;
-            speechRecognizer.ReadyForSpeech += SpeechRecognizer_ReadyForSpeech;
+            this.speechRecognizer = SpeechRecognizer.CreateSpeechRecognizer(this);
+            this.speechRecognizer.Results += SpeechRecognizer_Results;
+            this.speechRecognizer.ReadyForSpeech += SpeechRecognizer_ReadyForSpeech;
+
+            this.jsonFileReader = new JsonFileReader();
+            this.wordsList = this.jsonFileReader.GetWordsList(Assets.Open("words.json"));
         }
 
         private void LoadLayout()
