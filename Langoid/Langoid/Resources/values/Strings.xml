@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="ApplicationName">Langoid</string>
     <string name="Start">Start</string>
     <string name="Stop">Stop</string>
-    <string name="ApplicationName">SpeechRecPoC</string>
 </resources>
