@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ApplicationName">Langoid</string>
+  
     <string name="Start">Start</string>
     <string name="Stop">Stop</string>
+    <string name="Exit">Wyjdź</string>
+    <string name="Back">Powrót</string>
+    <string name="ClearScores">Wyczyść najlepsze wyniki</string>
+    <string name="Save">Zapisz</string>
+    <string name="Skip">Pomiń</string>
+    <string name="SaveGame">Zapisz grę</string>   
+    <string name="HighScores">Najlepsze wyniki</string>
+    <string name="ChooseLanguage">Wybierz język</string>
+    <string name="Vocabulary">Nauka słownictwa</string>
+    <string name="Pronunciations">Nauka wymowy</string>
+    <string name="Nick">Nick:</string>
+    <string name="Points">Punkty:</string>
+
+    <string name="English">angielski</string>
+    <string name="German">niemiecki</string>
 </resources>

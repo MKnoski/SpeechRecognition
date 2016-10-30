@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ChooseLanguage"
+            android:textColor="@color/DarkBlue"
+            android:textAlignment="center"
+            android:textSize="14pt"
+            android:layout_margin="10dp" />
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+            <RadioButton
+                android:id="@+id/englishRadio"
+                android:drawableLeft="@drawable/great_britian_flag"
+                android:drawablePadding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/English"
+                android:textColor="@color/DarkBlue"
+                android:onClick="onRadioButtonClicked"
+                android:buttonTint="@color/DarkBlue"
+                android:layout_marginBottom="10dp"
+                android:textSize="10pt" />
+            <RadioButton
+                android:id="@+id/germanRadio"
+                android:drawableLeft="@drawable/germany_flag"
+                android:drawablePadding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/German"
+                android:textColor="@color/DarkBlue"
+                android:onClick="onRadioButtonClicked"
+                android:buttonTint="@color/DarkBlue"
+                android:textSize="10pt" />
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/Back"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:textColor="@color/DarkBlue"
+            android:layout_margin="10dp"
+            android:text="@string/Back"
+            android:textSize="10pt" />
+        <Button
+            android:id="@+id/Save"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:textColor="@color/DarkBlue"
+            android:text="@string/Save"
+            android:textSize="10pt" />
+    </LinearLayout>
+</LinearLayout>
