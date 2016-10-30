@@ -12,6 +12,7 @@ using Android.Widget;
 
 namespace Langoid.Activities
 {
+    [Activity(Label = "Langoid", Icon = "@drawable/icon")]
     public class MenuActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
