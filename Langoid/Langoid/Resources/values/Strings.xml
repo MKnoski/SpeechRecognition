@@ -16,7 +16,11 @@
     <string name="Pronunciations">Nauka wymowy</string>
     <string name="Nick">Nick:</string>
     <string name="Points">Punkty:</string>
-
+    <string name="Attempt">Próba:</string>
+    <string name="EndGame">Zakończ grę</string>
+    <string name="NextWord">Następne słowo</string>
+    <string name="NextPicture">Następny obrazek</string>
+  
     <string name="English">angielski</string>
     <string name="German">niemiecki</string>
 </resources>

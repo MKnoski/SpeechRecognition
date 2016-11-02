@@ -11,8 +11,8 @@
         android:layout_height="80dp"
         android:textColor="@color/Navy"
         android:layout_margin="10sp"
-        android:text="@string/Pronunciations" 
-        android:textSize="10pt"/>
+        android:text="@string/Pronunciations"
+        android:textSize="10pt" />
     <Button
         android:id="@+id/vocabularyButton"
         android:background="@drawable/button"
@@ -23,7 +23,7 @@
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
         android:text="@string/Vocabulary"
-        android:textSize="10pt"/>
+        android:textSize="10pt" />
     <Button
         android:id="@+id/chooseLanguageButton"
         android:background="@drawable/button"
@@ -34,7 +34,7 @@
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
         android:text="@string/ChooseLanguage"
-        android:textSize="10pt"/>
+        android:textSize="10pt" />
     <Button
         android:id="@+id/hishScoresButton"
         android:background="@drawable/button"
@@ -45,7 +45,7 @@
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
         android:text="@string/HighScores"
-        android:textSize="10pt"/>
+        android:textSize="10pt" />
     <Button
         android:id="@+id/exitButton"
         android:background="@drawable/button"
@@ -56,5 +56,5 @@
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
         android:text="@string/Exit"
-        android:textSize="10pt"/>
+        android:textSize="10pt" />
 </LinearLayout>

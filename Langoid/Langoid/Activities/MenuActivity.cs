@@ -12,13 +12,13 @@ using Android.Widget;
 
 namespace Langoid.Activities
 {
-    [Activity(Label = "Langoid", Icon = "@drawable/icon")]
+    [Activity(Label = "Langoid", MainLauncher = true, Icon = "@drawable/icon")]
     public class MenuActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.SaveDialog);
+            SetContentView(Resource.Layout.Vocabulary);
             // Create your application here
         }
     }

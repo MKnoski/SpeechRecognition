@@ -489,6 +489,12 @@ namespace Langoid
 			// aapt resource value: 0x7f020003
 			public const int Icon = 2130837507;
 			
+			// aapt resource value: 0x7f020004
+			public const int microphone = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int microphone_small = 2130837509;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -502,23 +508,26 @@ namespace Langoid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060002
-			public const int Back = 2131099650;
-			
-			// aapt resource value: 0x7f060003
-			public const int Save = 2131099651;
-			
 			// aapt resource value: 0x7f060004
 			public const int Start = 2131099652;
 			
 			// aapt resource value: 0x7f060005
 			public const int Stop = 2131099653;
 			
+			// aapt resource value: 0x7f06000d
+			public const int attemptText = 2131099661;
+			
+			// aapt resource value: 0x7f060002
+			public const int backButton = 2131099650;
+			
 			// aapt resource value: 0x7f060008
 			public const int chooseLanguageButton = 2131099656;
 			
-			// aapt resource value: 0x7f06000c
-			public const int editText = 2131099660;
+			// aapt resource value: 0x7f060012
+			public const int editText = 2131099666;
+			
+			// aapt resource value: 0x7f06000f
+			public const int endGameButton = 2131099663;
 			
 			// aapt resource value: 0x7f060000
 			public const int englishRadio = 2131099648;
@@ -532,14 +541,29 @@ namespace Langoid
 			// aapt resource value: 0x7f060009
 			public const int hishScoresButton = 2131099657;
 			
-			// aapt resource value: 0x7f06000b
-			public const int nickText = 2131099659;
+			// aapt resource value: 0x7f060010
+			public const int nextButton = 2131099664;
+			
+			// aapt resource value: 0x7f060011
+			public const int nickText = 2131099665;
+			
+			// aapt resource value: 0x7f06000e
+			public const int pointsText = 2131099662;
 			
 			// aapt resource value: 0x7f060006
 			public const int pronunciationsButton = 2131099654;
 			
+			// aapt resource value: 0x7f06000c
+			public const int pronunciationsText = 2131099660;
+			
+			// aapt resource value: 0x7f060003
+			public const int saveButton = 2131099651;
+			
 			// aapt resource value: 0x7f060007
 			public const int vocabularyButton = 2131099655;
+			
+			// aapt resource value: 0x7f06000b
+			public const int wordText = 2131099659;
 			
 			static Id()
 			{
@@ -567,7 +591,13 @@ namespace Langoid
 			public const int Menu = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int SaveDialog = 2130903044;
+			public const int Pronunciations = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int SaveDialog = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int Vocabulary = 2130903046;
 			
 			static Layout()
 			{
@@ -585,6 +615,9 @@ namespace Langoid
 			// aapt resource value: 0x7f050000
 			public const int ApplicationName = 2131034112;
 			
+			// aapt resource value: 0x7f05000f
+			public const int Attempt = 2131034127;
+			
 			// aapt resource value: 0x7f050004
 			public const int Back = 2131034116;
 			
@@ -594,17 +627,26 @@ namespace Langoid
 			// aapt resource value: 0x7f050005
 			public const int ClearScores = 2131034117;
 			
-			// aapt resource value: 0x7f05000f
-			public const int English = 2131034127;
+			// aapt resource value: 0x7f050010
+			public const int EndGame = 2131034128;
+			
+			// aapt resource value: 0x7f050013
+			public const int English = 2131034131;
 			
 			// aapt resource value: 0x7f050003
 			public const int Exit = 2131034115;
 			
-			// aapt resource value: 0x7f050010
-			public const int German = 2131034128;
+			// aapt resource value: 0x7f050014
+			public const int German = 2131034132;
 			
 			// aapt resource value: 0x7f050009
 			public const int HighScores = 2131034121;
+			
+			// aapt resource value: 0x7f050012
+			public const int NextPicture = 2131034130;
+			
+			// aapt resource value: 0x7f050011
+			public const int NextWord = 2131034129;
 			
 			// aapt resource value: 0x7f05000d
 			public const int Nick = 2131034125;

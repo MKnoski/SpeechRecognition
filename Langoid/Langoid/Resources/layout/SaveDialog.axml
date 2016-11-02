@@ -4,96 +4,84 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/White">
-
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical">
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/SaveGame"
-        android:textColor="@color/DarkBlue"
-        android:gravity="center"
-        android:textSize="14pt"
-        android:layout_margin="10dp"/>
-
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/SaveGame"
+            android:textColor="@color/DarkBlue"
+            android:gravity="center"
+            android:textSize="14pt"
+            android:layout_margin="10dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Nick"
+                android:layout_gravity="center"
+                android:textColor="@color/DarkBlue"
+                android:textSize="10pt"
+                android:layout_margin="10dp" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/DarkBlue"
+                android:textSize="10pt"
+                android:id="@+id/nickText" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Points"
+                android:layout_gravity="center"
+                android:textColor="@color/DarkBlue"
+                android:textSize="10pt"
+                android:layout_margin="10dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/DarkBlue"
+                android:text="21"
+                android:textSize="10pt"
+                android:id="@+id/editText" />
+        </LinearLayout>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/Nick"
-          android:layout_gravity="center"
-          android:textColor="@color/DarkBlue"
-          android:textSize="10pt"
-          android:layout_margin="10dp"/>
-
-      <EditText
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:textColor="@color/DarkBlue"
-          android:textSize="10pt"
-          android:id="@+id/nickText" />
-
+        <Button
+            android:id="@+id/backButton"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:textColor="@color/DarkBlue"
+            android:layout_margin="10dp"
+            android:text="@string/Skip"
+            android:textSize="10pt" />
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:textColor="@color/DarkBlue"
+            android:text="@string/Save"
+            android:textSize="10pt" />
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/Points"
-          android:layout_gravity="center"
-          android:textColor="@color/DarkBlue"
-          android:textSize="10pt"
-          android:layout_margin="10dp"/>
-
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:textColor="@color/DarkBlue"
-          android:text="21"
-          android:textSize="10pt"
-          android:id="@+id/editText" />
-      
-    </LinearLayout>
-    
-  </LinearLayout>
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal">
-    <Button
-        android:id="@+id/Back"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_weight="1"
-        android:background="@drawable/button"
-        android:textColor="@color/DarkBlue"
-        android:layout_margin="10dp"
-        android:text="@string/Skip"
-        android:textSize="10pt"/>
-    <Button
-        android:id="@+id/Save"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_weight="1"
-        android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button"
-        android:textColor="@color/DarkBlue"
-        android:text="@string/Save"
-        android:textSize="10pt"/>
-
-  </LinearLayout>
 </LinearLayout>

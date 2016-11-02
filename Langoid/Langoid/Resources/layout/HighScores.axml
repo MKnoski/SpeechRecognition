@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true">
             <Button
-                android:id="@+id/Back"
+                android:id="@+id/backButton"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
@@ -60,7 +60,7 @@
                 android:text="@string/Back"
                 android:textSize="10pt" />
             <Button
-                android:id="@+id/Save"
+                android:id="@+id/saveButton"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"

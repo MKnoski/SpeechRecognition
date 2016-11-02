@@ -10,7 +10,7 @@ using Langoid.Services;
 
 namespace Langoid.Activities
 {
-    [Activity(Label = "Langoid", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Langoid", Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         private SpeechRecognizer speechRecognizer;
