@@ -27,7 +27,6 @@ namespace Langoid.Activities
             SetContentView(Resource.Layout.Menu);
 
             this.LoadLayout();
-            // Create your application here
         }
 
         private void LoadLayout()

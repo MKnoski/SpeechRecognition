@@ -514,8 +514,8 @@ namespace Langoid
 			// aapt resource value: 0x7f060005
 			public const int Stop = 2131099653;
 			
-			// aapt resource value: 0x7f06000d
-			public const int attemptText = 2131099661;
+			// aapt resource value: 0x7f06000e
+			public const int attemptText = 2131099662;
 			
 			// aapt resource value: 0x7f060002
 			public const int backButton = 2131099650;
@@ -523,11 +523,11 @@ namespace Langoid
 			// aapt resource value: 0x7f060008
 			public const int chooseLanguageButton = 2131099656;
 			
-			// aapt resource value: 0x7f060012
-			public const int editText = 2131099666;
+			// aapt resource value: 0x7f060013
+			public const int editText = 2131099667;
 			
-			// aapt resource value: 0x7f06000f
-			public const int endGameButton = 2131099663;
+			// aapt resource value: 0x7f060010
+			public const int endGameButton = 2131099664;
 			
 			// aapt resource value: 0x7f060000
 			public const int englishRadio = 2131099648;
@@ -541,14 +541,17 @@ namespace Langoid
 			// aapt resource value: 0x7f060009
 			public const int highScoresButton = 2131099657;
 			
-			// aapt resource value: 0x7f060010
-			public const int nextButton = 2131099664;
+			// aapt resource value: 0x7f06000d
+			public const int microphoneImage = 2131099661;
 			
 			// aapt resource value: 0x7f060011
-			public const int nickText = 2131099665;
+			public const int nextButton = 2131099665;
 			
-			// aapt resource value: 0x7f06000e
-			public const int pointsText = 2131099662;
+			// aapt resource value: 0x7f060012
+			public const int nickText = 2131099666;
+			
+			// aapt resource value: 0x7f06000f
+			public const int pointsText = 2131099663;
 			
 			// aapt resource value: 0x7f060006
 			public const int pronunciationsButton = 2131099654;

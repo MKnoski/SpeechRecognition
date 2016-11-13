@@ -30,8 +30,7 @@ namespace Langoid.Activities
             this.speechRecognizer.Results += SpeechRecognizer_Results;
             this.speechRecognizer.ReadyForSpeech += SpeechRecognizer_ReadyForSpeech;
 
-            this.jsonFileReader = new JsonFileReader();
-            this.wordsList = this.jsonFileReader.GetWordsList(Assets.Open("words.json"));
+
         }
 
         private void LoadLayout()
