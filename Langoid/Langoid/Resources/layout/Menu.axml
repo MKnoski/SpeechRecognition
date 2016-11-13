@@ -36,7 +36,7 @@
         android:text="@string/ChooseLanguage"
         android:textSize="10pt" />
     <Button
-        android:id="@+id/hishScoresButton"
+        android:id="@+id/highScoresButton"
         android:background="@drawable/button"
         android:layout_width="match_parent"
         android:layout_height="80dp"

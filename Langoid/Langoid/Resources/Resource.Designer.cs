@@ -539,7 +539,7 @@ namespace Langoid
 			public const int germanRadio = 2131099649;
 			
 			// aapt resource value: 0x7f060009
-			public const int hishScoresButton = 2131099657;
+			public const int highScoresButton = 2131099657;
 			
 			// aapt resource value: 0x7f060010
 			public const int nextButton = 2131099664;

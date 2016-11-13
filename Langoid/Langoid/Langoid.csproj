@@ -55,8 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\ChooseLanguageActivity.cs" />
+    <Compile Include="Activities\HighScoresActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\MenuActivity.cs" />
+    <Compile Include="Activities\PronunciationsActivity.cs" />
+    <Compile Include="Activities\VocabularyActivity.cs" />
     <Compile Include="Constans.cs" />
     <Compile Include="Models\Word.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
