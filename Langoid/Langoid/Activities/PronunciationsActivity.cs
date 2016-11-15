@@ -1,44 +1,87 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Speech;
 using Android.Views;
 using Android.Widget;
 using Langoid.Models;
 using Langoid.Services;
+using Langoid.ExtensionMethods;
 
 namespace Langoid.Activities
 {
-    [Activity(Label = "PronunciationsActivity")]
+    [Activity]
     public class PronunciationsActivity : Activity
     {
         private SpeechRecognizer speechRecognizer;
+        private JsonFileReader jsonFileReader;
 
         private TextView wordTextView;
         private TextView pronunciationsTextView;
         private TextView attemptTextView;
-        private ImageView microphoneImageView;
+        private ImageView microphoneStartImageView;
         private List<Word> wordsList;
         private Word currentWord;
+        private ImageView microphoneStopImageView;
+        private Button nextButton;
+
+        private int numberOfAttempts;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Pronunciations);
+            this.Title = this.GetString(Resource.String.PronunciationsActivityTitle);
 
             this.speechRecognizer = SpeechRecognizer.CreateSpeechRecognizer(this);
             this.speechRecognizer.Results += SpeechRecognizerOnResults;
 
-            var jsonFileReader = new JsonFileReader();
-            this.wordsList = jsonFileReader.GetWordsList(Assets.Open("words.json"));
+            this.jsonFileReader = new JsonFileReader();
+            this.wordsList = this.jsonFileReader.GetWordsList(Assets.Open("words.json"));
 
             this.LoadLayout();
+        }
+
+        private void LoadLayout()
+        {
+            this.wordTextView = this.FindViewById<TextView>(Resource.Id.wordText);
+            this.pronunciationsTextView = this.FindViewById<TextView>(Resource.Id.pronunciationsText);
+            this.attemptTextView = this.FindViewById<TextView>(Resource.Id.attemptText);
+            this.nextButton = this.FindViewById<Button>(Resource.Id.nextButton);
+            this.nextButton.Click += this.NextButtonOnClick;
+            this.microphoneStartImageView = this.FindViewById<ImageView>(Resource.Id.microphoneImage);
+            this.microphoneStartImageView.Click += this.MicrophoneStartImageViewOnClick;
+
+            this.microphoneStopImageView = this.FindViewById<ImageView>(Resource.Id.microphoneStopImage);
+            this.microphoneStopImageView.Click += this.MicrophoneStopImageViewOnClick;
+
+            this.SetNextWord();
+        }
+
+        private void NextButtonOnClick(object sender, EventArgs eventArgs)
+        {
+            this.DisplayStartMicrophone();
+            this.speechRecognizer.StopListening();
+            this.SetNextWord();
+        }
+
+        private void MicrophoneStopImageViewOnClick(object sender, EventArgs eventArgs)
+        {
+            this.speechRecognizer.StopListening();
+        }
+
+        private void MicrophoneStartImageViewOnClick(object sender, EventArgs eventArgs)
+        {
+            var intent = new Intent(RecognizerIntent.ActionRecognizeSpeech);
+            intent.PutExtra(RecognizerIntent.ExtraLanguageModel, "en-US");
+            intent.PutExtra(RecognizerIntent.ExtraCallingPackage, "voice.recognition.test");
+            intent.PutExtra(RecognizerIntent.ExtraMaxResults, 1);
+
+            this.speechRecognizer.StartListening(intent);
+
+            this.DisplayStopMicrophone();
         }
 
         private void SpeechRecognizerOnResults(object sender, ResultsEventArgs resultsEventArgs)
@@ -48,41 +91,52 @@ namespace Langoid.Activities
 
             Console.WriteLine(string.Join(" ", data));
 
-            if (data[0] == this.currentWord.Value)
+            if (string.Equals(data[0], this.currentWord.Value, StringComparison.CurrentCultureIgnoreCase))
             {
-                Toast.MakeText(this, "Próba zaliczona", ToastLength.Long).Show();
+                this.CorrentAttempt();
             }
             else
             {
-                Toast.MakeText(this, "Próba niezaliczona. Proszê powtórzyæ", ToastLength.Long).Show();
+                this.IncorrectAttempt();
             }
+
+            this.DisplayStartMicrophone();
         }
 
-        private void LoadLayout()
+        private void DisplayStopMicrophone()
         {
-            this.wordTextView = this.FindViewById<TextView>(Resource.Id.wordText);
-            this.pronunciationsTextView = this.FindViewById<TextView>(Resource.Id.pronunciationsText);
-            this.attemptTextView = this.FindViewById<TextView>(Resource.Id.attemptText);
-            this.microphoneImageView = this.FindViewById<ImageView>(Resource.Id.microphoneImage);
-            this.microphoneImageView.Click += MicrophoneImageViewOnClick;
-
-            this.SetWord(0);
+            this.microphoneStopImageView.Visibility = ViewStates.Visible;
+            this.microphoneStartImageView.Visibility = ViewStates.Gone;
         }
 
-        private void MicrophoneImageViewOnClick(object sender, EventArgs eventArgs)
+        private void DisplayStartMicrophone()
         {
-            var intent = new Intent(RecognizerIntent.ActionRecognizeSpeech);
-            intent.PutExtra(RecognizerIntent.ExtraLanguageModel, "en-US");
-            intent.PutExtra(RecognizerIntent.ExtraCallingPackage, "voice.recognition.test");
-
-            intent.PutExtra(RecognizerIntent.ExtraMaxResults, 1);
-            this.speechRecognizer.StartListening(intent);
+            this.microphoneStartImageView.Visibility = ViewStates.Visible;
+            this.microphoneStopImageView.Visibility = ViewStates.Gone;
         }
 
-        private void SetWord(int position)
+        private void SetNumberOfAttempts(int number)
         {
-            this.currentWord = this.wordsList[position];
+            this.attemptTextView.Text = $"{this.GetString(Resource.String.Attempt)}{number}";
+        }
 
+        private void CorrentAttempt()
+        {
+            Toast.MakeText(this, this.GetString(Resource.String.CorrectAttempt), ToastLength.Long).Show();
+            this.SetNextWord();
+        }
+
+        private void IncorrectAttempt()
+        {
+            this.SetNumberOfAttempts(++ this.numberOfAttempts);
+            Toast.MakeText(this, this.GetString(Resource.String.IncorrectAttempt), ToastLength.Long).Show();
+        }
+
+        private void SetNextWord()
+        {
+            this.currentWord = this.wordsList.NextOf(this.currentWord);
+
+            this.SetNumberOfAttempts(0);
             this.wordTextView.Text = currentWord.Value;
             this.pronunciationsTextView.Text = $"[{currentWord.Pronunciation}]";
         }

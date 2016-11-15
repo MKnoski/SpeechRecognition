@@ -39,7 +39,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
-            android:src="@drawable/microphone" />
+            android:visibility="visible"
+            android:src="@drawable/microphone" />     
+        <ImageView
+            android:id="@+id/microphoneStopImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:src="@drawable/microphone_stop" />
         <TextView
             android:id="@+id/attemptText"
             android:layout_width="match_parent"
@@ -49,8 +57,7 @@
             android:textColor="@color/DarkBlue"
             android:textSize="10pt"
             android:layout_marginTop="20dp" />
-      
-        <!--WTF ?-->
+    <!--WTF ?-->
         <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -29,8 +29,6 @@ namespace Langoid.Activities
             this.speechRecognizer = SpeechRecognizer.CreateSpeechRecognizer(this);
             this.speechRecognizer.Results += SpeechRecognizer_Results;
             this.speechRecognizer.ReadyForSpeech += SpeechRecognizer_ReadyForSpeech;
-
-
         }
 
         private void LoadLayout()

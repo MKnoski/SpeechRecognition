@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace Langoid.Activities
 {
-    [Activity(Label = "Langoid", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(MainLauncher = true, Icon = "@drawable/icon")]
     public class MenuActivity : Activity
     {
         private Button pronunciationsButton;
@@ -25,6 +25,7 @@ namespace Langoid.Activities
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Menu);
+            this.Title = this.GetString(Resource.String.MenuActivityTitle);
 
             this.LoadLayout();
         }

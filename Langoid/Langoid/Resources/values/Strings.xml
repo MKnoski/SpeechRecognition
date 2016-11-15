@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ApplicationName">Langoid</string>
+    <string name="MenuActivityTitle">Menu główne</string>
+    <string name="PronunciationsActivityTitle">Nauka wymowy</string>
   
     <string name="Start">Start</string>
     <string name="Stop">Stop</string>
@@ -16,10 +18,12 @@
     <string name="Pronunciations">Nauka wymowy</string>
     <string name="Nick">Nick:</string>
     <string name="Points">Punkty:</string>
-    <string name="Attempt">Próba:</string>
+    <string name="Attempt">Próba: </string>
     <string name="EndGame">Zakończ grę</string>
     <string name="NextWord">Następne słowo</string>
     <string name="NextPicture">Następny obrazek</string>
+    <string name="CorrectAttempt">Próba zaliczona</string>
+    <string name="IncorrectAttempt">Próba niezaliczona. Proszę powtórzyć</string>
   
     <string name="English">angielski</string>
     <string name="German">niemiecki</string>
