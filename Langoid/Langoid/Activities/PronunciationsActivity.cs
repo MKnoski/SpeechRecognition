@@ -70,6 +70,7 @@ namespace Langoid.Activities
         private void MicrophoneStopImageViewOnClick(object sender, EventArgs eventArgs)
         {
             this.speechRecognizer.StopListening();
+            this.DisplayStartMicrophone();
         }
 
         private void MicrophoneStartImageViewOnClick(object sender, EventArgs eventArgs)

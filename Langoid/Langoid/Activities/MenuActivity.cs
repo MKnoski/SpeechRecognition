@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Langoid.Dialogs;
 
 namespace Langoid.Activities
 {
@@ -39,7 +40,7 @@ namespace Langoid.Activities
             this.vocabularyButton.Click += (sender, args) => this.StartActivity(typeof(VocabularyActivity));
 
             this.chooseLanguageButton = this.FindViewById<Button>(Resource.Id.chooseLanguageButton);
-            this.chooseLanguageButton.Click += (sender, args) => this.StartActivity(typeof(ChooseLanguageActivity));
+            this.chooseLanguageButton.Click += (sender, args) => new ChooseLanguageDialog(this, LayoutInflater).Show();
 
             this.highScoresButton = this.FindViewById<Button>(Resource.Id.highScoresButton);
             this.highScoresButton.Click += (sender, args) => this.StartActivity(typeof(HighScoresActivity));
