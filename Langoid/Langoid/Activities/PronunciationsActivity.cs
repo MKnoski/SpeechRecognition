@@ -46,15 +46,15 @@ namespace Langoid.Activities
 
         private void LoadLayout()
         {
-            this.wordTextView = this.FindViewById<TextView>(Resource.Id.wordText);
-            this.pronunciationsTextView = this.FindViewById<TextView>(Resource.Id.pronunciationsText);
-            this.attemptTextView = this.FindViewById<TextView>(Resource.Id.attemptText);
-            this.nextButton = this.FindViewById<Button>(Resource.Id.nextButton);
+            this.wordTextView = this.FindViewById<TextView>(Resource.Id.pronunciations_wordText);
+            this.pronunciationsTextView = this.FindViewById<TextView>(Resource.Id.pronunciations_pronunciationsText);
+            this.attemptTextView = this.FindViewById<TextView>(Resource.Id.pronunciations_attemptText);
+            this.nextButton = this.FindViewById<Button>(Resource.Id.pronunciations_nextButton);
             this.nextButton.Click += this.NextButtonOnClick;
-            this.microphoneStartImageView = this.FindViewById<ImageView>(Resource.Id.microphoneImage);
+            this.microphoneStartImageView = this.FindViewById<ImageView>(Resource.Id.pronunciations_microphoneStartImage);
             this.microphoneStartImageView.Click += this.MicrophoneStartImageViewOnClick;
 
-            this.microphoneStopImageView = this.FindViewById<ImageView>(Resource.Id.microphoneStopImage);
+            this.microphoneStopImageView = this.FindViewById<ImageView>(Resource.Id.pronunciations_microphoneStopImage);
             this.microphoneStopImageView.Click += this.MicrophoneStopImageViewOnClick;
 
             this.SetNextWord();

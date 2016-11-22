@@ -4,87 +4,93 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/White">
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Vocabulary"
-        android:textColor="@color/DarkBlue"
-        android:gravity="center"
-        android:textSize="14pt"
-        android:layout_margin="10dp" />
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        />
-    
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:src="@drawable/microphone_small"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Attempt"
-        android:id="@+id/attemptText"
-        android:gravity="center"
-        android:textColor="@color/DarkBlue"
-        android:textSize="10pt" />
-  </LinearLayout>
-  <RelativeLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_alignParentBottom="true">
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/Points"
-          android:id="@+id/pointsText"
-          android:layout_weight="1"
-          android:layout_marginLeft="5dp"
-          android:gravity="bottom"
-          android:textColor="@color/DarkBlue"
-          android:textSize="10pt"
-          android:layout_marginTop="20dp"
-          android:layout_alignParentBottom="true"/>
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:orientation="horizontal"
-          android:layout_height="wrap_content"
-          android:layout_alignParentBottom="true">
-
-        <Button
-            android:id="@+id/endGameButton"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/button"
+            android:text="@string/Vocabulary"
             android:textColor="@color/DarkBlue"
+            android:gravity="center"
+            android:textSize="14pt"
+            android:layout_margin="10dp" />
+        <ImageView
+            android:id="@+id/vocabulary_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp" />
+        <ImageView
+            android:id="@+id/vocabulary_microphoneStartImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_margin="10dp"
-            android:text="@string/EndGame"
-            android:textSize="8pt" />
-        <Button
-            android:id="@+id/nextButton"
+            android:visibility="visible"
+            android:src="@drawable/microphone" />
+        <ImageView
+            android:id="@+id/vocabulary_microphoneStopImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:src="@drawable/microphone_stop" />
+        <TextView
+            android:id="@+id/vocabulary_attemptText"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/button"
+            android:text="@string/Attempt"
+            android:gravity="center"
             android:textColor="@color/DarkBlue"
-            android:text="@string/NextPicture"
-            android:textSize="8pt" />
-      </LinearLayout>
+            android:textSize="10pt" />
     </LinearLayout>
-
-  </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Points"
+                android:id="@+id/pointsText"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:gravity="bottom"
+                android:textColor="@color/DarkBlue"
+                android:textSize="10pt"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentBottom="true" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+                <Button
+                    android:id="@+id/vocabulary_endGameButton"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button"
+                    android:textColor="@color/DarkBlue"
+                    android:layout_margin="10dp"
+                    android:text="@string/EndGame"
+                    android:textSize="8pt" />
+                <Button
+                    android:id="@+id/vocabulary_nextButton"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button"
+                    android:textColor="@color/DarkBlue"
+                    android:text="@string/NextPicture"
+                    android:textSize="8pt" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

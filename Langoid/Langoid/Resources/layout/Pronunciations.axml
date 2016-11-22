@@ -17,7 +17,7 @@
             android:textSize="14pt"
             android:layout_margin="10dp" />
         <TextView
-            android:id="@+id/wordText"
+            android:id="@+id/pronunciations_wordText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Słowo"
@@ -26,7 +26,7 @@
             android:textSize="10pt"
             android:layout_marginTop="30dp" />
         <TextView
-            android:id="@+id/pronunciationsText"
+            android:id="@+id/pronunciations_pronunciationsText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="[wymowa]"
@@ -35,21 +35,21 @@
             android:textSize="8pt"
             android:layout_marginTop="5dp" />
         <ImageView
-            android:id="@+id/microphoneImage"
+            android:id="@+id/pronunciations_microphoneStartImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:visibility="visible"
-            android:src="@drawable/microphone" />     
+            android:src="@drawable/microphone" />
         <ImageView
-            android:id="@+id/microphoneStopImage"
+            android:id="@+id/pronunciations_microphoneStopImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:visibility="gone"
             android:src="@drawable/microphone_stop" />
         <TextView
-            android:id="@+id/attemptText"
+            android:id="@+id/pronunciations_attemptText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Attempt"
@@ -57,12 +57,6 @@
             android:textColor="@color/DarkBlue"
             android:textSize="10pt"
             android:layout_marginTop="20dp" />
-    <!--WTF ?-->
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginBottom="20dp" />
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -90,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true">
                 <Button
-                    android:id="@+id/endGameButton"
+                    android:id="@+id/pronunciations_endGameButton"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:layout_weight="1"
@@ -100,7 +94,7 @@
                     android:text="@string/EndGame"
                     android:textSize="8pt" />
                 <Button
-                    android:id="@+id/nextButton"
+                    android:id="@+id/pronunciations_nextButton"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:layout_weight="1"
