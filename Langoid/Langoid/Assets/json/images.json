@@ -1,0 +1,12 @@
+﻿[
+  {
+    "Id": "0",
+    "Value": "food",
+    "ImagePath": "images/food.jpg"
+  },
+  {
+    "Id": "1",
+    "Value": "apple",
+    "ImagePath": "images/apple.jpg"
+  }
+]

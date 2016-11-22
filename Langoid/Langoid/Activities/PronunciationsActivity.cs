@@ -38,8 +38,9 @@ namespace Langoid.Activities
             this.speechRecognizer = SpeechRecognizer.CreateSpeechRecognizer(this);
             this.speechRecognizer.Results += SpeechRecognizerOnResults;
 
+            // TODO: introduce IoC
             this.jsonFileReader = new JsonFileReader();
-            this.wordsList = this.jsonFileReader.GetWordsList(Assets.Open("words.json"));
+            this.wordsList = this.jsonFileReader.GetWordsList(Assets.Open(@"json/words.json"));
 
             this.LoadLayout();
         }
