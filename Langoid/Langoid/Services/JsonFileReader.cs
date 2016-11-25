@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using Langoid.Models;
 using Newtonsoft.Json;
@@ -8,22 +7,25 @@ namespace Langoid.Services
 {
     public class JsonFileReader
     {
-        //TODO: refactoring (duplicated code)
-        public List<Word> GetWordsList(Stream jsonStream)
+        public List<LearningModel> GetWordsList(Stream jsonStream)
         {
-            var json = string.Empty;
-
-            using (var streamReader = new StreamReader(jsonStream))
-            {
-                json = streamReader.ReadToEnd();
-            }
+            var json = this.LoadJson(jsonStream);
 
             var wordsList = JsonConvert.DeserializeObject<List<Word>>(json);
 
-            return wordsList;
+            return wordsList.ConvertAll(word => word as LearningModel);
         }
 
-        public List<Image> GetImagesList(Stream jsonStream)
+        public List<LearningModel> GetImagesList(Stream jsonStream)
+        {
+            var json = this.LoadJson(jsonStream);
+
+            var imagesList = JsonConvert.DeserializeObject<List<Image>>(json);
+
+            return imagesList.ConvertAll(image => image as LearningModel);
+        }
+
+        private string LoadJson(Stream jsonStream)
         {
             var json = string.Empty;
 
@@ -31,10 +33,7 @@ namespace Langoid.Services
             {
                 json = streamReader.ReadToEnd();
             }
-
-            var imagesList = JsonConvert.DeserializeObject<List<Image>>(json);
-
-            return imagesList;
+            return json;
         }
     }
 }

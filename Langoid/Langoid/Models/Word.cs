@@ -3,12 +3,8 @@
 namespace Langoid.Models
 {
     [Serializable]
-    public class Word
+    public class Word : LearningModel
     {
-        public string Id { get; set; }
-
-        public string Value { get; set; }
-
         public string Pronunciation { get; set; }
     }
 }

@@ -3,6 +3,7 @@
     <string name="ApplicationName">Langoid</string>
     <string name="MenuActivityTitle">Menu główne</string>
     <string name="PronunciationsActivityTitle">Nauka wymowy</string>
+    <string name="VocabularyActivityTitle">Nauka słownictwa</string>
   
     <string name="Start">Start</string>
     <string name="Stop">Stop</string>

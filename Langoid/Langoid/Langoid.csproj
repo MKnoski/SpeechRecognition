@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\HighScoresActivity.cs" />
+    <Compile Include="Activities\LanguageLearningBaseActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\MenuActivity.cs" />
     <Compile Include="Activities\PronunciationsActivity.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Dialogs\ChooseLanguageDialog.cs" />
     <Compile Include="ExtensionMethods\ListExtension.cs" />
     <Compile Include="Models\Image.cs" />
+    <Compile Include="Models\LearningModel.cs" />
     <Compile Include="Models\Word.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
