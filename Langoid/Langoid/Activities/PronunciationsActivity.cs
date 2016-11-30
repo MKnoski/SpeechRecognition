@@ -1,7 +1,9 @@
 using Android.App;
 using Android.OS;
 using Android.Widget;
+using Langoid.Enums;
 using Langoid.Models;
+using Langoid.Services;
 
 namespace Langoid.Activities
 {
@@ -17,7 +19,10 @@ namespace Langoid.Activities
             SetContentView(Resource.Layout.Pronunciations);
             this.Title = this.GetString(Resource.String.PronunciationsActivityTitle);
 
-            base.LearningModelsList = this.JsonFileReader.GetWordsList(Assets.Open(@"json/words.json"));
+            if (LanguageService.CurrentLanguage.Name == Language.English)
+                base.LearningModelsList = this.JsonFileReader.GetWordsList(Assets.Open(@"json/words_eng.json"));
+            else
+                base.LearningModelsList = this.JsonFileReader.GetWordsList(Assets.Open(@"json/words_ger.json"));
 
             this.LoadLayout();
         }

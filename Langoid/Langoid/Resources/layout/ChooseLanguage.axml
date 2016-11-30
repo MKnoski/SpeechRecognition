@@ -17,6 +17,7 @@
             android:textSize="14pt"
             android:layout_margin="10dp" />
         <RadioGroup
+            android:id="@+id/languageGroup"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"

@@ -7,6 +7,22 @@ namespace Langoid.Services
 {
     public class JsonFileReader
     {
+        public LanguageName GetCurrentLanguage(Stream jsonStream)
+        {
+            var json = this.LoadJson(jsonStream);
+
+            var language = JsonConvert.DeserializeObject<LanguageName>(json);
+
+            return language as LanguageName;
+        }
+
+        public void SaveCurrentLanguage(Stream jsonStream, LanguageName language)
+        {
+            var json = this.LoadJson(jsonStream);
+
+            JsonConvert.SerializeObject(language);
+        }
+
         public List<LearningModel> GetWordsList(Stream jsonStream)
         {
             var json = this.LoadJson(jsonStream);

@@ -1,0 +1,47 @@
+﻿[
+  {
+    "Id": "0",
+    "Value": "der Stuhl",
+    "Pronunciation": "der sztul"
+  },
+  {
+    "Id": "1",
+    "Value": "das Bett",
+    "Pronunciation": "das bet"
+  },
+  {
+    "Id": "2",
+    "Value": "das Mädchen",
+    "Pronunciation": "das medsien"
+  },
+  {
+    "Id": "3",
+    "Value": "der Apfel",
+    "Pronunciation": "der apfel"
+  },
+  {
+    "Id": "4",
+    "Value": "der Lehrer",
+    "Pronunciation": "der lerer"
+  },
+  {
+    "Id": "5",
+    "Value": "die Wohnung",
+    "Pronunciation": "di wonong"
+  },
+  {
+    "Id": "6",
+    "Value": "das Stadt",
+    "Pronunciation": "das sztad"
+  },
+  {
+    "Id": "7",
+    "Value": "das Märchen",
+    "Pronunciation": "das mersien"
+  },
+  {
+    "Id": "8",
+    "Value": "die Prüfung",
+    "Pronunciation": "di pryfung"
+  }
+]

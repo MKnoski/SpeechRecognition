@@ -63,13 +63,17 @@
     <Compile Include="Activities\VocabularyActivity.cs" />
     <Compile Include="Constans.cs" />
     <Compile Include="Dialogs\ChooseLanguageDialog.cs" />
+    <Compile Include="Enums\Language.cs" />
     <Compile Include="ExtensionMethods\ListExtension.cs" />
+    <Compile Include="Models\LanguageName.cs" />
+    <Compile Include="Models\Score.cs" />
     <Compile Include="Models\Image.cs" />
     <Compile Include="Models\LearningModel.cs" />
     <Compile Include="Models\Word.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\JsonFileReader.cs" />
+    <Compile Include="Services\LanguageService.cs" />
     <Compile Include="Services\SQLiteConnectionService.cs" />
     <Compile Include="SQLite\SQLite.cs" />
     <Compile Include="SQLite\SQLiteAsync.cs" />
@@ -86,10 +90,16 @@
     <AndroidResource Include="Resources\drawable\Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\json\words.json">
+    <AndroidAsset Include="Assets\json\words_eng.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AndroidAsset>
     <AndroidAsset Include="Assets\json\images.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\json\words_ger.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\json\language.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AndroidAsset>
     <None Include="packages.config" />

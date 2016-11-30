@@ -10,6 +10,7 @@ using Android.Widget;
 using Langoid.ExtensionMethods;
 using Langoid.Models;
 using Langoid.Services;
+using Langoid.Enums;
 
 namespace Langoid.Activities
 {
@@ -85,7 +86,11 @@ namespace Langoid.Activities
         private void MicrophoneStartImageViewOnClick(object sender, EventArgs eventArgs)
         {
             var intent = new Intent(RecognizerIntent.ActionRecognizeSpeech);
-            intent.PutExtra(RecognizerIntent.ExtraLanguageModel, "en-US");
+            
+            if (LanguageService.CurrentLanguage.Name == Language.English)
+                intent.PutExtra(RecognizerIntent.ExtraLanguageModel, "en-US");
+            else
+                intent.PutExtra(RecognizerIntent.ExtraLanguageModel, "de_DE");
             intent.PutExtra(RecognizerIntent.ExtraCallingPackage, "voice.recognition.test");
             intent.PutExtra(RecognizerIntent.ExtraMaxResults, 1);
 
@@ -132,5 +137,6 @@ namespace Langoid.Activities
             this.SpeechRecognizer.StopListening();
             this.SetNextLearningModel();
         }
+  
     }
 }

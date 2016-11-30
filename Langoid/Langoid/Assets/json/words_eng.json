@@ -1,0 +1,52 @@
+﻿[
+  {
+    "Id": "0",
+    "Value": "food",
+    "Pronunciation": "fud"
+  },
+  {
+    "Id": "1",
+    "Value": "apple",
+    "Pronunciation": "epyl"
+  },
+  {
+    "Id": "2",
+    "Value": "comfortable",
+    "Pronunciation": "kamftybul"
+  },
+  {
+    "Id": "3",
+    "Value": "read",
+    "Pronunciation": "rid"
+  },
+  {
+    "Id": "4",
+    "Value": "move",
+    "Pronunciation": "mów"
+  },
+  {
+    "Id": "5",
+    "Value": "real",
+    "Pronunciation": "ril"
+  },
+  {
+    "Id": "6",
+    "Value": "go",
+    "Pronunciation": "goł"
+  },
+  {
+    "Id": "7",
+    "Value": "weather",
+    "Pronunciation": "łeder"
+  },
+  {
+    "Id": "8",
+    "Value": "apple",
+    "Pronunciation": "epyl"
+  },
+  {
+    "Id": "9",
+    "Value": "tomato",
+    "Pronunciation": "tomejto"
+  }
+]
