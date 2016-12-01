@@ -57,7 +57,6 @@
   <ItemGroup>
     <Compile Include="Activities\HighScoresActivity.cs" />
     <Compile Include="Activities\LanguageLearningBaseActivity.cs" />
-    <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\MenuActivity.cs" />
     <Compile Include="Activities\PronunciationsActivity.cs" />
     <Compile Include="Activities\VocabularyActivity.cs" />

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Android;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -49,12 +48,15 @@ namespace Langoid.Activities
 
         protected void SpeechRecognizerOnResults(object sender, ResultsEventArgs e)
         {
-            var data = e.Results.GetStringArrayList(SpeechRecognizer.ResultsRecognition);
-            if (data == null) return;
+            var recognitionResults = e.Results.GetStringArrayList(SpeechRecognizer.ResultsRecognition);
+            var confidenceScores = e.Results.GetFloatArray(SpeechRecognizer.ConfidenceScores);
 
-            System.Console.WriteLine(string.Join(" ", data));
+            if (recognitionResults == null) return;
 
-            if (string.Equals(data[0], this.CurrentLearningModel.Value, StringComparison.CurrentCultureIgnoreCase))
+            Console.WriteLine(string.Join(" ", recognitionResults));
+            Console.WriteLine(string.Join(" ", confidenceScores));
+
+            if (string.Equals(recognitionResults[0], this.CurrentLearningModel.Value, StringComparison.CurrentCultureIgnoreCase))
             {
                 this.CorrentAttempt();
             }
@@ -86,11 +88,9 @@ namespace Langoid.Activities
         private void MicrophoneStartImageViewOnClick(object sender, EventArgs eventArgs)
         {
             var intent = new Intent(RecognizerIntent.ActionRecognizeSpeech);
-            
-            if (LanguageService.CurrentLanguage.Name == Language.English)
-                intent.PutExtra(RecognizerIntent.ExtraLanguageModel, "en-US");
-            else
-                intent.PutExtra(RecognizerIntent.ExtraLanguageModel, "de_DE");
+
+            intent.PutExtra(RecognizerIntent.ExtraLanguageModel,
+                LanguageService.CurrentLanguage.Name == Language.English ? "en-US" : "de_DE");
             intent.PutExtra(RecognizerIntent.ExtraCallingPackage, "voice.recognition.test");
             intent.PutExtra(RecognizerIntent.ExtraMaxResults, 1);
 

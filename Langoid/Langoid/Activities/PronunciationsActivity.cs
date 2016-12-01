@@ -19,10 +19,10 @@ namespace Langoid.Activities
             SetContentView(Resource.Layout.Pronunciations);
             this.Title = this.GetString(Resource.String.PronunciationsActivityTitle);
 
-            if (LanguageService.CurrentLanguage.Name == Language.English)
-                base.LearningModelsList = this.JsonFileReader.GetWordsList(Assets.Open(@"json/words_eng.json"));
-            else
-                base.LearningModelsList = this.JsonFileReader.GetWordsList(Assets.Open(@"json/words_ger.json"));
+            var jsonFileName = LanguageService.CurrentLanguage.Name == Language.English
+                ? @"json/words_eng.json"
+                : @"json/words_ger.json";
+            base.LearningModelsList = this.JsonFileReader.GetWordsList(Assets.Open(jsonFileName));
 
             this.LoadLayout();
         }
