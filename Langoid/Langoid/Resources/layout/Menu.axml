@@ -8,7 +8,7 @@
         android:id="@+id/pronunciationsButton"
         android:background="@drawable/button"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="90dp"
         android:textColor="@color/Navy"
         android:layout_margin="10sp"
         android:text="@string/Pronunciations"
@@ -17,7 +17,7 @@
         android:id="@+id/vocabularyButton"
         android:background="@drawable/button"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="90dp"
         android:textColor="@color/Navy"
         android:layout_marginBottom="10sp"
         android:layout_marginLeft="10sp"
@@ -28,14 +28,14 @@
         android:id="@+id/chooseLanguageButton"
         android:background="@drawable/button"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="90dp"
         android:textColor="@color/DarkBlue"
         android:layout_marginBottom="10sp"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
         android:text="@string/ChooseLanguage"
         android:textSize="10pt" />
-    <Button
+    <!--<Button
         android:id="@+id/highScoresButton"
         android:background="@drawable/button"
         android:layout_width="match_parent"
@@ -45,12 +45,12 @@
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
         android:text="@string/HighScores"
-        android:textSize="10pt" />
+        android:textSize="10pt" />-->
     <Button
         android:id="@+id/exitButton"
         android:background="@drawable/button"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="90dp"
         android:textColor="@color/Navy"
         android:layout_marginBottom="10sp"
         android:layout_marginLeft="10sp"

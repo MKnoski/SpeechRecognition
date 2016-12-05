@@ -1,8 +1,13 @@
 using Android.App;
+using Android.Content;
 using Android.OS;
+using Android.Preferences;
 using Android.Widget;
 using Langoid.Dialogs;
+using Langoid.Enums;
+using Langoid.Models;
 using Langoid.Services;
+using System;
 
 namespace Langoid.Activities
 {
@@ -25,7 +30,6 @@ namespace Langoid.Activities
             this.LoadLayout();
 
             JsonFileReader = new JsonFileReader();
-            LanguageService.CurrentLanguage = new Models.LanguageName();
             LoadLanguage();      
         }
 
@@ -40,8 +44,8 @@ namespace Langoid.Activities
             this.chooseLanguageButton = this.FindViewById<Button>(Resource.Id.chooseLanguageButton);
             this.chooseLanguageButton.Click += (sender, args) => new ChooseLanguageDialog(LayoutInflater, this).Show();
 
-            this.highScoresButton = this.FindViewById<Button>(Resource.Id.highScoresButton);
-            this.highScoresButton.Click += (sender, args) => this.StartActivity(typeof(HighScoresActivity));
+            //this.highScoresButton = this.FindViewById<Button>(Resource.Id.highScoresButton);
+            //this.highScoresButton.Click += (sender, args) => this.StartActivity(typeof(HighScoresActivity));
 
             this.exitButton = this.FindViewById<Button>(Resource.Id.exitButton);
             this.exitButton.Click += (sender, args) => this.Finish();
@@ -49,12 +53,16 @@ namespace Langoid.Activities
 
         public void SaveLanguage()
         {
-            JsonFileReader.SaveCurrentLanguage(Assets.Open(@"json/language.json"), LanguageService.CurrentLanguage);
+            ISharedPreferences preferences = PreferenceManager.GetDefaultSharedPreferences(this);
+            ISharedPreferencesEditor editor = preferences.Edit();
+            editor.PutInt("language", (int)LanguageService.CurrentLanguage);
+            editor.Apply();
         }
 
         public void LoadLanguage()
         { 
-            LanguageService.CurrentLanguage = JsonFileReader.GetCurrentLanguage(Assets.Open(@"json/language.json"));
+            ISharedPreferences preferences = PreferenceManager.GetDefaultSharedPreferences(this);
+            LanguageService.CurrentLanguage = (Language)Enum.ToObject(typeof(Language), preferences.GetInt("language", 0));
         }
     }
 }

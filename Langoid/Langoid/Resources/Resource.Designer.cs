@@ -504,6 +504,9 @@ namespace Langoid
 			// aapt resource value: 0x7f020008
 			public const int microphone_stop = 2130837512;
 			
+			// aapt resource value: 0x7f020009
+			public const int speaker = 2130837513;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -529,29 +532,23 @@ namespace Langoid
 			// aapt resource value: 0x7f060009
 			public const int chooseLanguageButton = 2131099657;
 			
-			// aapt resource value: 0x7f060015
-			public const int editText = 2131099669;
+			// aapt resource value: 0x7f060014
+			public const int editText = 2131099668;
 			
 			// aapt resource value: 0x7f060001
 			public const int englishRadio = 2131099649;
 			
-			// aapt resource value: 0x7f06000b
-			public const int exitButton = 2131099659;
+			// aapt resource value: 0x7f06000a
+			public const int exitButton = 2131099658;
 			
 			// aapt resource value: 0x7f060002
 			public const int germanRadio = 2131099650;
 			
-			// aapt resource value: 0x7f06000a
-			public const int highScoresButton = 2131099658;
-			
 			// aapt resource value: 0x7f060000
 			public const int languageGroup = 2131099648;
 			
-			// aapt resource value: 0x7f060014
-			public const int nickText = 2131099668;
-			
-			// aapt resource value: 0x7f060011
-			public const int pointsText = 2131099665;
+			// aapt resource value: 0x7f060013
+			public const int nickText = 2131099667;
 			
 			// aapt resource value: 0x7f060007
 			public const int pronunciationsButton = 2131099655;
@@ -559,8 +556,8 @@ namespace Langoid
 			// aapt resource value: 0x7f060010
 			public const int pronunciations_attemptText = 2131099664;
 			
-			// aapt resource value: 0x7f060012
-			public const int pronunciations_endGameButton = 2131099666;
+			// aapt resource value: 0x7f060011
+			public const int pronunciations_endGameButton = 2131099665;
 			
 			// aapt resource value: 0x7f06000e
 			public const int pronunciations_microphoneStartImage = 2131099662;
@@ -568,11 +565,14 @@ namespace Langoid
 			// aapt resource value: 0x7f06000f
 			public const int pronunciations_microphoneStopImage = 2131099663;
 			
-			// aapt resource value: 0x7f060013
-			public const int pronunciations_nextButton = 2131099667;
+			// aapt resource value: 0x7f060012
+			public const int pronunciations_nextButton = 2131099666;
 			
 			// aapt resource value: 0x7f06000d
 			public const int pronunciations_pronunciationsText = 2131099661;
+			
+			// aapt resource value: 0x7f06000b
+			public const int pronunciations_speakerImage = 2131099659;
 			
 			// aapt resource value: 0x7f06000c
 			public const int pronunciations_wordText = 2131099660;
@@ -600,6 +600,9 @@ namespace Langoid
 			
 			// aapt resource value: 0x7f06001b
 			public const int vocabulary_nextButton = 2131099675;
+			
+			// aapt resource value: 0x7f060015
+			public const int vocabulary_speakerImage = 2131099669;
 			
 			static Id()
 			{

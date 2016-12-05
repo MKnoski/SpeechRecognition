@@ -34,7 +34,7 @@ namespace Langoid.Dialogs
             this.backButton.Click += (sender, args) => dialog.Dismiss();
             this.saveButton.Click += (sender, args) => { activity.SaveLanguage(); dialog.Dismiss(); };
 
-            if (LanguageService.CurrentLanguage.Name == Enums.Language.English)
+            if (LanguageService.CurrentLanguage == Enums.Language.English)
             {
                 englishButton.Checked = true;
             }
@@ -46,17 +46,17 @@ namespace Langoid.Dialogs
             this.englishButton.Click += (sender, args) => 
                 {
                     if (englishButton.Checked)
-                        LanguageService.CurrentLanguage.Name = Enums.Language.English;
+                        LanguageService.CurrentLanguage = Enums.Language.English;
                     else
-                        LanguageService.CurrentLanguage.Name = Enums.Language.German;
+                        LanguageService.CurrentLanguage = Enums.Language.German;
                 };
 
             this.germanButton.Click += (sender, args) =>
             {
                 if (germanButton.Checked)
-                    LanguageService.CurrentLanguage.Name = Enums.Language.German;
+                    LanguageService.CurrentLanguage = Enums.Language.German;
                 else
-                    LanguageService.CurrentLanguage.Name = Enums.Language.English;
+                    LanguageService.CurrentLanguage = Enums.Language.English;
             };
         }
         public void Show()

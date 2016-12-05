@@ -30,6 +30,7 @@ namespace Langoid.Activities
             base.NextButton = this.FindViewById<Button>(Resource.Id.vocabulary_nextButton);
             base.MicrophoneStartImageView = this.FindViewById<ImageView>(Resource.Id.vocabulary_microphoneStartImage);
             base.MicrophoneStopImageView = this.FindViewById<ImageView>(Resource.Id.vocabulary_microphoneStopImage);
+            base.SpeakerImageView = this.FindViewById<ImageView>(Resource.Id.vocabulary_speakerImage);
 
             base.LoadLayout();
         }

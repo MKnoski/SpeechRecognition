@@ -8,14 +8,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:weightSum="3">
+        <ImageView
+            android:id="@+id/pronunciations_speakerImage"
+            android:layout_weight="6"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Pronunciations"
-            android:textColor="@color/DarkBlue"
-            android:gravity="center"
-            android:textSize="14pt"
-            android:layout_margin="10dp" />
+            android:layout_gravity="right"
+            android:src="@drawable/speaker" />
+      </LinearLayout>
         <TextView
             android:id="@+id/pronunciations_wordText"
             android:layout_width="match_parent"
@@ -61,12 +67,12 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
+        <!--<LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_alignParentBottom="true">
-            <TextView
+            android:layout_alignParentBottom="true">-->
+            <!--<TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Points"
@@ -77,7 +83,7 @@
                 android:textColor="@color/DarkBlue"
                 android:textSize="10pt"
                 android:layout_marginTop="20dp"
-                android:layout_alignParentBottom="true" />
+                android:layout_alignParentBottom="true" />-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
@@ -105,6 +111,6 @@
                     android:text="@string/NextWord"
                     android:textSize="8pt" />
             </LinearLayout>
-        </LinearLayout>
+        <!--</LinearLayout>-->
     </RelativeLayout>
 </LinearLayout>

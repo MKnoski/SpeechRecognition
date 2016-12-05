@@ -10,10 +10,13 @@ using Langoid.ExtensionMethods;
 using Langoid.Models;
 using Langoid.Services;
 using Langoid.Enums;
+using Android.Speech.Tts;
+using Android.Runtime;
+using Java.Util;
 
 namespace Langoid.Activities
 {
-    public class LanguageLearningBaseActivity : Activity
+    public class LanguageLearningBaseActivity : Activity, TextToSpeech.IOnInitListener
     {
         #region Layout objects
         protected SpeechRecognizer SpeechRecognizer;
@@ -22,11 +25,13 @@ namespace Langoid.Activities
         protected Button NextButton;
         protected ImageView MicrophoneStartImageView;
         protected ImageView MicrophoneStopImageView;
+        protected ImageView SpeakerImageView;
         protected int NumberOfAttempts;
         #endregion
 
         protected List<LearningModel> LearningModelsList;
         protected LearningModel CurrentLearningModel;
+        protected TextToSpeech Speaker;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -42,6 +47,7 @@ namespace Langoid.Activities
             this.NextButton.Click += this.NextButtonOnClick;
             this.MicrophoneStartImageView.Click += this.MicrophoneStartImageViewOnClick;
             this.MicrophoneStopImageView.Click += this.MicrophoneStopImageViewOnClick;
+            this.SpeakerImageView.Click += this.SpeakerImageViewOnClick;
 
             this.SetNextLearningModel();
         }
@@ -90,7 +96,7 @@ namespace Langoid.Activities
             var intent = new Intent(RecognizerIntent.ActionRecognizeSpeech);
 
             intent.PutExtra(RecognizerIntent.ExtraLanguageModel,
-                LanguageService.CurrentLanguage.Name == Language.English ? "en-US" : "de_DE");
+                LanguageService.CurrentLanguage == Language.English ? "en-US" : "de_DE");
             intent.PutExtra(RecognizerIntent.ExtraCallingPackage, "voice.recognition.test");
             intent.PutExtra(RecognizerIntent.ExtraMaxResults, 1);
 
@@ -117,6 +123,11 @@ namespace Langoid.Activities
             this.MicrophoneStopImageView.Visibility = ViewStates.Gone;
         }
 
+        private void SpeakerImageViewOnClick(object sender, EventArgs eventArgs)
+        {
+            Speak();
+        }
+
         private void SetNextLearningModel()
         {
             this.CurrentLearningModel = this.LearningModelsList.NextOf(this.CurrentLearningModel);
@@ -137,6 +148,32 @@ namespace Langoid.Activities
             this.SpeechRecognizer.StopListening();
             this.SetNextLearningModel();
         }
-  
+
+        public void OnInit([GeneratedEnum] OperationResult status)
+        {
+            if (status.Equals(OperationResult.Success))
+            {
+                var p = new Dictionary<string, string>();
+                Speaker.Speak(this.CurrentLearningModel.Value, QueueMode.Flush, p);
+            }
+        }
+
+        public void Speak()
+        {
+            if (Speaker == null)
+            {
+                Speaker = new TextToSpeech(this, this);
+            }
+            else
+            {
+                if (LanguageService.CurrentLanguage == Language.English)
+                    Speaker.SetLanguage(Locale.English);
+                else
+                    Speaker.SetLanguage(Locale.German);
+
+                var p = new Dictionary<string, string>();
+                Speaker.Speak(this.CurrentLearningModel.Value, QueueMode.Flush, p);
+            }
+        }
     }
 }

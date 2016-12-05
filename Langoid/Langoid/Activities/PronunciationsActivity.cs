@@ -19,7 +19,7 @@ namespace Langoid.Activities
             SetContentView(Resource.Layout.Pronunciations);
             this.Title = this.GetString(Resource.String.PronunciationsActivityTitle);
 
-            var jsonFileName = LanguageService.CurrentLanguage.Name == Language.English
+            var jsonFileName = LanguageService.CurrentLanguage == Language.English
                 ? @"json/words_eng.json"
                 : @"json/words_ger.json";
             base.LearningModelsList = this.JsonFileReader.GetWordsList(Assets.Open(jsonFileName));
@@ -36,6 +36,7 @@ namespace Langoid.Activities
             base.NextButton = this.FindViewById<Button>(Resource.Id.pronunciations_nextButton);
             base.MicrophoneStartImageView = this.FindViewById<ImageView>(Resource.Id.pronunciations_microphoneStartImage);
             base.MicrophoneStopImageView = this.FindViewById<ImageView>(Resource.Id.pronunciations_microphoneStopImage);
+            base.SpeakerImageView = this.FindViewById<ImageView>(Resource.Id.pronunciations_speakerImage);
 
             base.LoadLayout();
         }

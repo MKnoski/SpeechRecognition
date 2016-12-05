@@ -1,4 +1,5 @@
 ﻿using Langoid.Models;
+using Langoid.Enums;
 using SQLite;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,22 +28,22 @@ namespace Langoid.Services
 
         public List<Score> GetEnglishPronunciationsScores()
         {
-            return connection.Table<Score>().Where(x => x.Language == Enums.Language.English && x.Mode == "Pronunciations").ToList();
+            return connection.Table<Score>().Where(x => x.Language == Enums.Language.English && x.Mode == Mode.Pronunciations).ToList();
         }
 
         public List<Score> GetEnglishVocabularyScores()
         {
-            return connection.Table<Score>().Where(x => x.Language == Enums.Language.English && x.Mode == "Vocabulary").ToList();
+            return connection.Table<Score>().Where(x => x.Language == Enums.Language.English && x.Mode == Mode.Vocabulary).ToList();
         }
 
         public List<Score> GetGermanPronunciationsScores()
         {
-            return connection.Table<Score>().Where(x => x.Language == Enums.Language.German && x.Mode == "Pronunciations").ToList();
+            return connection.Table<Score>().Where(x => x.Language == Enums.Language.German && x.Mode == Mode.Pronunciations).ToList();
         }
 
         public List<Score> GetGermanVocabularyScores()
         {
-            return connection.Table<Score>().Where(x => x.Language == Enums.Language.German && x.Mode == "Vocabulary").ToList();
+            return connection.Table<Score>().Where(x => x.Language == Enums.Language.German && x.Mode == Mode.Vocabulary).ToList();
         }
 
         public bool CheckScoreIsHighScore(Score score)

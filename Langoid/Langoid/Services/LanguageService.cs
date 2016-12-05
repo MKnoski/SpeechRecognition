@@ -1,20 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Langoid.Models;
+using Langoid.Enums;
 
 namespace Langoid.Services
 {
     public static class LanguageService
     {
-        public static LanguageName CurrentLanguage { get; set; }
+        public static Language CurrentLanguage { get; set; }
     }
 }

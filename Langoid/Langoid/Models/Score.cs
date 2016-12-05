@@ -10,6 +10,6 @@ namespace Langoid.Models
         public string Nick { get; set; }
         public int Value { get; set; }
         public Language Language { get; set; }
-        public string Mode { get; set; }
+        public Mode Mode { get; set; }
     }
 }
