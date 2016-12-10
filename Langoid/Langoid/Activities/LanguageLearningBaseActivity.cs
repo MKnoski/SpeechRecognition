@@ -88,7 +88,7 @@ namespace Langoid.Activities
 
         private void SetNumberOfAttempts(int number)
         {
-            this.AttemptTextView.Text = $"{this.GetString(Resource.String.Attempt)}{number}";
+            this.AttemptTextView.Text = $"{this.GetString(Resource.String.Attempt)} {number}";
         }
 
         private void MicrophoneStartImageViewOnClick(object sender, EventArgs eventArgs)

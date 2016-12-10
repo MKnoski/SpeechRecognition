@@ -532,8 +532,8 @@ namespace Langoid
 			// aapt resource value: 0x7f060009
 			public const int chooseLanguageButton = 2131099657;
 			
-			// aapt resource value: 0x7f060014
-			public const int editText = 2131099668;
+			// aapt resource value: 0x7f060016
+			public const int editText = 2131099670;
 			
 			// aapt resource value: 0x7f060001
 			public const int englishRadio = 2131099649;
@@ -547,17 +547,23 @@ namespace Langoid
 			// aapt resource value: 0x7f060000
 			public const int languageGroup = 2131099648;
 			
-			// aapt resource value: 0x7f060013
-			public const int nickText = 2131099667;
+			// aapt resource value: 0x7f060015
+			public const int nickText = 2131099669;
 			
 			// aapt resource value: 0x7f060007
 			public const int pronunciationsButton = 2131099655;
 			
-			// aapt resource value: 0x7f060010
-			public const int pronunciations_attemptText = 2131099664;
-			
 			// aapt resource value: 0x7f060011
-			public const int pronunciations_endGameButton = 2131099665;
+			public const int pronunciations_accuracyProgressBar = 2131099665;
+			
+			// aapt resource value: 0x7f060010
+			public const int pronunciations_accuracyText = 2131099664;
+			
+			// aapt resource value: 0x7f060012
+			public const int pronunciations_attemptText = 2131099666;
+			
+			// aapt resource value: 0x7f060013
+			public const int pronunciations_endGameButton = 2131099667;
 			
 			// aapt resource value: 0x7f06000e
 			public const int pronunciations_microphoneStartImage = 2131099662;
@@ -565,8 +571,8 @@ namespace Langoid
 			// aapt resource value: 0x7f06000f
 			public const int pronunciations_microphoneStopImage = 2131099663;
 			
-			// aapt resource value: 0x7f060012
-			public const int pronunciations_nextButton = 2131099666;
+			// aapt resource value: 0x7f060014
+			public const int pronunciations_nextButton = 2131099668;
 			
 			// aapt resource value: 0x7f06000d
 			public const int pronunciations_pronunciationsText = 2131099661;
@@ -583,26 +589,32 @@ namespace Langoid
 			// aapt resource value: 0x7f060008
 			public const int vocabularyButton = 2131099656;
 			
-			// aapt resource value: 0x7f060019
-			public const int vocabulary_attemptText = 2131099673;
-			
-			// aapt resource value: 0x7f06001a
-			public const int vocabulary_endGameButton = 2131099674;
-			
-			// aapt resource value: 0x7f060016
-			public const int vocabulary_image = 2131099670;
-			
-			// aapt resource value: 0x7f060017
-			public const int vocabulary_microphoneStartImage = 2131099671;
-			
-			// aapt resource value: 0x7f060018
-			public const int vocabulary_microphoneStopImage = 2131099672;
+			// aapt resource value: 0x7f06001c
+			public const int vocabulary_accuracyProgressBar = 2131099676;
 			
 			// aapt resource value: 0x7f06001b
-			public const int vocabulary_nextButton = 2131099675;
+			public const int vocabulary_accuracyText = 2131099675;
 			
-			// aapt resource value: 0x7f060015
-			public const int vocabulary_speakerImage = 2131099669;
+			// aapt resource value: 0x7f06001d
+			public const int vocabulary_attemptText = 2131099677;
+			
+			// aapt resource value: 0x7f06001e
+			public const int vocabulary_endGameButton = 2131099678;
+			
+			// aapt resource value: 0x7f060018
+			public const int vocabulary_image = 2131099672;
+			
+			// aapt resource value: 0x7f060019
+			public const int vocabulary_microphoneStartImage = 2131099673;
+			
+			// aapt resource value: 0x7f06001a
+			public const int vocabulary_microphoneStopImage = 2131099674;
+			
+			// aapt resource value: 0x7f06001f
+			public const int vocabulary_nextButton = 2131099679;
+			
+			// aapt resource value: 0x7f060017
+			public const int vocabulary_speakerImage = 2131099671;
 			
 			static Id()
 			{
@@ -651,6 +663,9 @@ namespace Langoid
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f050013
+			public const int Accuracy = 2131034131;
+			
 			// aapt resource value: 0x7f050000
 			public const int ApplicationName = 2131034112;
 			
@@ -666,35 +681,35 @@ namespace Langoid
 			// aapt resource value: 0x7f050008
 			public const int ClearScores = 2131034120;
 			
-			// aapt resource value: 0x7f050016
-			public const int CorrectAttempt = 2131034134;
+			// aapt resource value: 0x7f050017
+			public const int CorrectAttempt = 2131034135;
 			
-			// aapt resource value: 0x7f050013
-			public const int EndGame = 2131034131;
+			// aapt resource value: 0x7f050014
+			public const int EndGame = 2131034132;
 			
-			// aapt resource value: 0x7f050018
-			public const int English = 2131034136;
+			// aapt resource value: 0x7f050019
+			public const int English = 2131034137;
 			
 			// aapt resource value: 0x7f050006
 			public const int Exit = 2131034118;
 			
-			// aapt resource value: 0x7f050019
-			public const int German = 2131034137;
+			// aapt resource value: 0x7f05001a
+			public const int German = 2131034138;
 			
 			// aapt resource value: 0x7f05000c
 			public const int HighScores = 2131034124;
 			
-			// aapt resource value: 0x7f050017
-			public const int IncorrectAttempt = 2131034135;
+			// aapt resource value: 0x7f050018
+			public const int IncorrectAttempt = 2131034136;
 			
 			// aapt resource value: 0x7f050001
 			public const int MenuActivityTitle = 2131034113;
 			
-			// aapt resource value: 0x7f050015
-			public const int NextPicture = 2131034133;
+			// aapt resource value: 0x7f050016
+			public const int NextPicture = 2131034134;
 			
-			// aapt resource value: 0x7f050014
-			public const int NextWord = 2131034132;
+			// aapt resource value: 0x7f050015
+			public const int NextWord = 2131034133;
 			
 			// aapt resource value: 0x7f050010
 			public const int Nick = 2131034128;

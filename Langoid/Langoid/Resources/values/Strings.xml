@@ -20,6 +20,7 @@
     <string name="Nick">Nick:</string>
     <string name="Points">Punkty:</string>
     <string name="Attempt">Próba: </string>
+    <string name="Accuracy">Dokładność: </string>
     <string name="EndGame">Zakończ grę</string>
     <string name="NextWord">Następne słowo</string>
     <string name="NextPicture">Następny obrazek</string>
