@@ -27,6 +27,7 @@ namespace Langoid.Activities
         protected ImageView MicrophoneStopImageView;
         protected ImageView SpeakerImageView;
         protected int NumberOfAttempts;
+        protected ProgressBar AccuracyProgressBar;
         #endregion
 
         protected List<LearningModel> LearningModelsList;
@@ -62,6 +63,7 @@ namespace Langoid.Activities
             Console.WriteLine(string.Join(" ", recognitionResults));
             Console.WriteLine(string.Join(" ", confidenceScores));
 
+            this.AccuracyProgressBar.Progress = (int) (confidenceScores[0]*100);
             if (string.Equals(recognitionResults[0], this.CurrentLearningModel.Value, StringComparison.CurrentCultureIgnoreCase))
             {
                 this.CorrentAttempt();
@@ -131,10 +133,14 @@ namespace Langoid.Activities
         private void SetNextLearningModel()
         {
             this.CurrentLearningModel = this.LearningModelsList.NextOf(this.CurrentLearningModel);
-
             this.SetNumberOfAttempts(0);
-
             this.SetLearningModelOnView();
+            this.ResetAccuracyProgressBar();
+        }
+
+        private void ResetAccuracyProgressBar()
+        {
+            this.AccuracyProgressBar.Progress = 0;
         }
 
         protected virtual void SetLearningModelOnView()
@@ -166,10 +172,9 @@ namespace Langoid.Activities
             }
             else
             {
-                if (LanguageService.CurrentLanguage == Language.English)
-                    Speaker.SetLanguage(Locale.English);
-                else
-                    Speaker.SetLanguage(Locale.German);
+                this.Speaker.SetLanguage(LanguageService.CurrentLanguage == Language.English
+                    ? Locale.English
+                    : Locale.German);
 
                 var p = new Dictionary<string, string>();
                 Speaker.Speak(this.CurrentLearningModel.Value, QueueMode.Flush, p);

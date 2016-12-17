@@ -4,91 +4,91 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/White">
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical">
     <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      android:layout_margin="10dp"
-      android:weightSum="3">
-      <ImageView
-          android:id="@+id/pronunciations_speakerImage"
-          android:layout_weight="6"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="right"
-          android:src="@drawable/speaker" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:weightSum="3">
+            <ImageView
+                android:id="@+id/pronunciations_speakerImage"
+                android:layout_weight="6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/speaker" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/pronunciations_wordText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Słowo"
+            android:gravity="center"
+            android:textColor="@color/Black"
+            android:textSize="10pt"
+            android:layout_marginTop="30dp" />
+        <TextView
+            android:id="@+id/pronunciations_pronunciationsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[wymowa]"
+            android:gravity="center"
+            android:textColor="@color/Black"
+            android:textSize="8pt"
+            android:layout_marginTop="5dp" />
+        <ImageView
+            android:id="@+id/pronunciations_microphoneStartImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:visibility="visible"
+            android:src="@drawable/microphone" />
+        <ImageView
+            android:id="@+id/pronunciations_microphoneStopImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:src="@drawable/microphone_stop" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/pronunciations_accuracyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Accuracy"
+                android:textColor="@color/DarkBlue"
+                android:textSize="7pt"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp" />
+            <ProgressBar
+                android:id="@+id/pronunciations_accuracyProgressBar"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:max="100"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/pronunciations_attemptText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Attempt"
+            android:gravity="center"
+            android:textColor="@color/DarkBlue"
+            android:textSize="10pt"
+            android:layout_marginTop="20dp" />
     </LinearLayout>
-    <TextView
-        android:id="@+id/pronunciations_wordText"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Słowo"
-        android:gravity="center"
-        android:textColor="@color/Black"
-        android:textSize="10pt"
-        android:layout_marginTop="30dp" />
-    <TextView
-        android:id="@+id/pronunciations_pronunciationsText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="[wymowa]"
-        android:gravity="center"
-        android:textColor="@color/Black"
-        android:textSize="8pt"
-        android:layout_marginTop="5dp" />
-    <ImageView
-        android:id="@+id/pronunciations_microphoneStartImage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:visibility="visible"
-        android:src="@drawable/microphone" />
-    <ImageView
-        android:id="@+id/pronunciations_microphoneStopImage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:visibility="gone"
-        android:src="@drawable/microphone_stop" />
-    <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      android:gravity="center">
-      <TextView
-        android:id="@+id/pronunciations_accuracyText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Accuracy"
-        android:textColor="@color/DarkBlue"
-        android:textSize="7pt"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="5dp"/>
-      <ProgressBar
-        android:id="@+id/pronunciations_accuracyProgressBar"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        style="@android:style/Widget.ProgressBar.Horizontal"
-        android:layout_marginRight="20dp"/>
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/pronunciations_attemptText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Attempt"
-        android:gravity="center"
-        android:textColor="@color/DarkBlue"
-        android:textSize="10pt"
-        android:layout_marginTop="20dp" />
-  </LinearLayout>
-  <RelativeLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
+        android:layout_height="match_parent">
     <!--<LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -106,33 +106,33 @@
                 android:textSize="10pt"
                 android:layout_marginTop="20dp"
                 android:layout_alignParentBottom="true" />-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
-      <Button
-          android:id="@+id/pronunciations_endGameButton"
-          android:layout_height="wrap_content"
-          android:layout_width="wrap_content"
-          android:layout_weight="1"
-          android:background="@drawable/button"
-          android:textColor="@color/DarkBlue"
-          android:layout_margin="10dp"
-          android:text="@string/EndGame"
-          android:textSize="8pt" />
-      <Button
-          android:id="@+id/pronunciations_nextButton"
-          android:layout_height="wrap_content"
-          android:layout_width="wrap_content"
-          android:layout_weight="1"
-          android:layout_marginTop="10dp"
-          android:layout_marginRight="10dp"
-          android:background="@drawable/button"
-          android:textColor="@color/DarkBlue"
-          android:text="@string/NextWord"
-          android:textSize="8pt" />
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <Button
+                android:id="@+id/pronunciations_endGameButton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:textColor="@color/DarkBlue"
+                android:layout_margin="10dp"
+                android:text="@string/EndGame"
+                android:textSize="8pt" />
+            <Button
+                android:id="@+id/pronunciations_nextButton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button"
+                android:textColor="@color/DarkBlue"
+                android:text="@string/NextWord"
+                android:textSize="8pt" />
+        </LinearLayout>
     <!--</LinearLayout>-->
-  </RelativeLayout>
+    </RelativeLayout>
 </LinearLayout>

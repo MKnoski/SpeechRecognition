@@ -37,6 +37,7 @@ namespace Langoid.Activities
             base.MicrophoneStartImageView = this.FindViewById<ImageView>(Resource.Id.pronunciations_microphoneStartImage);
             base.MicrophoneStopImageView = this.FindViewById<ImageView>(Resource.Id.pronunciations_microphoneStopImage);
             base.SpeakerImageView = this.FindViewById<ImageView>(Resource.Id.pronunciations_speakerImage);
+            base.AccuracyProgressBar = this.FindViewById<ProgressBar>(Resource.Id.pronunciations_accuracyProgressBar);
 
             base.LoadLayout();
         }
