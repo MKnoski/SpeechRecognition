@@ -1,0 +1,17 @@
+﻿[
+  {
+    "Id": "0",
+    "Value": "das Essen",
+    "ImagePath": "images/food.jpg"
+  },
+  {
+    "Id": "1",
+    "Value": "der Apfel",
+    "ImagePath": "images/apple.jpg"
+  },
+  {
+    "Id": "2",
+    "Value": "das Auto",
+    "ImagePath": "images/auto.jpg"
+  }
+]

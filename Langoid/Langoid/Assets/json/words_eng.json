@@ -2,51 +2,51 @@
   {
     "Id": "0",
     "Value": "food",
-    "Pronunciation": "fud"
+    "Pronunciation": "[fo͞od] - jedzenie"
   },
   {
     "Id": "1",
     "Value": "apple",
-    "Pronunciation": "epyl"
+    "Pronunciation": "[ˈapəl] - jabłko"
   },
   {
     "Id": "2",
     "Value": "comfortable",
-    "Pronunciation": "kamftybul"
+    "Pronunciation": "[ˈkəmftərbəl] - wygodny"
   },
   {
     "Id": "3",
     "Value": "read",
-    "Pronunciation": "rid"
+    "Pronunciation": "[rēd] - czytać"
   },
   {
     "Id": "4",
     "Value": "move",
-    "Pronunciation": "mów"
+    "Pronunciation": "[mo͞ov] - ruszać się"
   },
   {
     "Id": "5",
     "Value": "real",
-    "Pronunciation": "ril"
+    "Pronunciation": "[rāˈäl] - prawdziwy"
   },
   {
     "Id": "6",
     "Value": "go",
-    "Pronunciation": "goł"
+    "Pronunciation": "[gō] - iść"
   },
   {
     "Id": "7",
     "Value": "weather",
-    "Pronunciation": "łeder"
+    "Pronunciation": "[ˈweT͟Hər] - pogoda"
   },
   {
     "Id": "8",
-    "Value": "apple",
-    "Pronunciation": "epyl"
+    "Value": "appear",
+    "Pronunciation": "[əˈpi(ə)r] - pojawić się"
   },
   {
     "Id": "9",
     "Value": "tomato",
-    "Pronunciation": "tomejto"
+    "Pronunciation": "[-ˈmätō] - pomidor"
   }
 ]

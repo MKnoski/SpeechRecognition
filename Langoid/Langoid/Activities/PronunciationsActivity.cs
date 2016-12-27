@@ -34,6 +34,7 @@ namespace Langoid.Activities
 
             base.AttemptTextView = this.FindViewById<TextView>(Resource.Id.pronunciations_attemptText);
             base.NextButton = this.FindViewById<Button>(Resource.Id.pronunciations_nextButton);
+            base.EndGameButton = this.FindViewById<Button>(Resource.Id.pronunciations_endGameButton);
             base.MicrophoneStartImageView = this.FindViewById<ImageView>(Resource.Id.pronunciations_microphoneStartImage);
             base.MicrophoneStopImageView = this.FindViewById<ImageView>(Resource.Id.pronunciations_microphoneStopImage);
             base.SpeakerImageView = this.FindViewById<ImageView>(Resource.Id.pronunciations_speakerImage);
@@ -47,7 +48,7 @@ namespace Langoid.Activities
             var currentWord = base.CurrentLearningModel as Word;
 
             this.wordTextView.Text = currentWord.Value;
-            this.pronunciationsTextView.Text = $"[{currentWord.Pronunciation}]";
+            this.pronunciationsTextView.Text = $"{currentWord.Pronunciation}";
         }
     }
 }

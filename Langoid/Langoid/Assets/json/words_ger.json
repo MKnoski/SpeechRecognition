@@ -2,46 +2,46 @@
   {
     "Id": "0",
     "Value": "der Stuhl",
-    "Pronunciation": "der sztul"
+    "Pronunciation": "[ˈʃtyːlə] - krzesło"
   },
   {
     "Id": "1",
     "Value": "das Bett",
-    "Pronunciation": "das bet"
+    "Pronunciation": "[bɛt] - łóżko"
   },
   {
     "Id": "2",
     "Value": "das Mädchen",
-    "Pronunciation": "das medsien"
+    "Pronunciation": " [ˈmɛːtçən] - dziewczyna"
   },
   {
     "Id": "3",
     "Value": "der Apfel",
-    "Pronunciation": "der apfel"
+    "Pronunciation": "[apfel] - jabłko"
   },
   {
     "Id": "4",
     "Value": "der Lehrer",
-    "Pronunciation": "der lerer"
+    "Pronunciation": "[lehrer] - nauczyciel"
   },
   {
     "Id": "5",
     "Value": "die Wohnung",
-    "Pronunciation": "di wonong"
+    "Pronunciation": "[wohnung] - mieszkanie"
   },
   {
     "Id": "6",
     "Value": "das Stadt",
-    "Pronunciation": "das sztad"
+    "Pronunciation": "[ʃtat] - miasto"
   },
   {
     "Id": "7",
     "Value": "das Märchen",
-    "Pronunciation": "das mersien"
+    "Pronunciation": " [ˈmɛːɐ̯çən] - bajka"
   },
   {
     "Id": "8",
     "Value": "die Prüfung",
-    "Pronunciation": "di pryfung"
+    "Pronunciation": "[pryfung] - egzamin"
   }
 ]

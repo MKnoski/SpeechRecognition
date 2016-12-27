@@ -13,6 +13,8 @@ using Langoid.Enums;
 using Android.Speech.Tts;
 using Android.Runtime;
 using Java.Util;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Langoid.Activities
 {
@@ -23,6 +25,7 @@ namespace Langoid.Activities
         protected JsonFileReader JsonFileReader;
         protected TextView AttemptTextView;
         protected Button NextButton;
+        protected Button EndGameButton;
         protected ImageView MicrophoneStartImageView;
         protected ImageView MicrophoneStopImageView;
         protected ImageView SpeakerImageView;
@@ -49,6 +52,7 @@ namespace Langoid.Activities
             this.MicrophoneStartImageView.Click += this.MicrophoneStartImageViewOnClick;
             this.MicrophoneStopImageView.Click += this.MicrophoneStopImageViewOnClick;
             this.SpeakerImageView.Click += this.SpeakerImageViewOnClick;
+            this.EndGameButton.Click += this.EndGameButtonOnClick;
 
             this.SetNextLearningModel();
         }
@@ -63,23 +67,37 @@ namespace Langoid.Activities
             Console.WriteLine(string.Join(" ", recognitionResults));
             Console.WriteLine(string.Join(" ", confidenceScores));
 
-            this.AccuracyProgressBar.Progress = (int) (confidenceScores[0]*100);
-            if (string.Equals(recognitionResults[0], this.CurrentLearningModel.Value, StringComparison.CurrentCultureIgnoreCase))
+            int bestResultIndex = GetConfidenceResultIndex(recognitionResults, confidenceScores);
+
+            if (bestResultIndex != -1 && confidenceScores[bestResultIndex] > 0.0)
             {
+                this.AccuracyProgressBar.Progress = (int)(confidenceScores[bestResultIndex] * 100);
                 this.CorrentAttempt();
             }
             else
             {
+                this.AccuracyProgressBar.Progress = 0;
                 this.IncorrectAttempt();
             }
 
             this.DisplayStartMicrophone();
         }
 
+        public int GetConfidenceResultIndex(IList<string> recognitionResults, float[] confidenceScores)
+        {
+            int index = 0;
+            foreach (var item in recognitionResults)
+            {
+                if (string.Equals(item, this.CurrentLearningModel.Value, StringComparison.CurrentCultureIgnoreCase)) return index;
+                index++;
+            }
+            return -1;
+        }
+
         private void CorrentAttempt()
         {
             Toast.MakeText(this, this.GetString(Resource.String.CorrectAttempt), ToastLength.Long).Show();
-            this.SetNextLearningModel();
+            //this.SetNextLearningModel();
         }
 
         private void IncorrectAttempt()
@@ -153,6 +171,11 @@ namespace Langoid.Activities
             this.DisplayStartMicrophone();
             this.SpeechRecognizer.StopListening();
             this.SetNextLearningModel();
+        }
+
+        private void EndGameButtonOnClick(object sender, EventArgs eventArgs)
+        {
+            this.Finish();
         }
 
         public void OnInit([GeneratedEnum] OperationResult status)

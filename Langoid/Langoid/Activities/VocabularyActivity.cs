@@ -2,7 +2,9 @@ using Android.App;
 using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Widget;
+using Langoid.Enums;
 using Langoid.Models;
+using Langoid.Services;
 
 namespace Langoid.Activities
 {
@@ -17,7 +19,11 @@ namespace Langoid.Activities
             SetContentView(Resource.Layout.Vocabulary);
             this.Title = this.GetString(Resource.String.VocabularyActivityTitle);
 
-            base.LearningModelsList = this.JsonFileReader.GetImagesList(Assets.Open(@"json/images.json"));
+            var jsonFileName = LanguageService.CurrentLanguage == Language.English
+                ? @"json/images_eng.json"
+                : @"json/images_ger.json";
+
+            base.LearningModelsList = this.JsonFileReader.GetImagesList(Assets.Open(jsonFileName));
 
             this.LoadLayout();
         }
@@ -28,6 +34,7 @@ namespace Langoid.Activities
 
             base.AttemptTextView = this.FindViewById<TextView>(Resource.Id.vocabulary_attemptText);
             base.NextButton = this.FindViewById<Button>(Resource.Id.vocabulary_nextButton);
+            base.EndGameButton = this.FindViewById<Button>(Resource.Id.vocabulary_endGameButton);
             base.MicrophoneStartImageView = this.FindViewById<ImageView>(Resource.Id.vocabulary_microphoneStartImage);
             base.MicrophoneStopImageView = this.FindViewById<ImageView>(Resource.Id.vocabulary_microphoneStopImage);
             base.SpeakerImageView = this.FindViewById<ImageView>(Resource.Id.vocabulary_speakerImage);

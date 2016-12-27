@@ -8,5 +8,10 @@
     "Id": "1",
     "Value": "apple",
     "ImagePath": "images/apple.jpg"
+  },
+  {
+    "Id": "2",
+    "Value": "car",
+    "ImagePath": "images/auto.jpg"
   }
 ]
