@@ -49,4 +49,44 @@
     "Value": "tomato",
     "Pronunciation": "[-ˈmätō] - pomidor"
   }
+  {
+    "Id": "10",
+    "Value": "move",
+    "Pronunciation": "[mu:v] - poruszać się"
+  }
+  {
+    "Id": "11",
+    "Value": "get",
+    "Pronunciation": "[gɛt] - poruszać się"
+  }
+  {
+    "Id": "12",
+    "Value": "separate",
+    "Pronunciation": "['sɛprɪt] - oddzielny"
+  }
+  {
+    "Id": "13",
+    "Value": "necessary",
+    "Pronunciation": "['nɛsɪsɪrɪ] - niezbędny"
+  }
+  {
+    "Id": "14",
+    "Value": "suprise",
+    "Pronunciation": "[suprise] - niespodzianka"
+  }
+  {
+    "Id": "15",
+    "Value": "rhythm",
+    "Pronunciation": "['rɪðm] - rytm"
+  }
+  {
+    "Id": "16",
+    "Value": "eligibility",
+    "Pronunciation": "[ɛlɪʤə'bɪlɪtɪ] - uprawnienie"
+  }
+  {
+    "Id": "17",
+    "Value": "acquirer",
+    "Pronunciation": "[ək'waɪərə(r)] - nabywca"
+  }
 ]
